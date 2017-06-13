@@ -4,7 +4,7 @@ library(ggplot2)
 igraph.options(print.vertex.attributes = TRUE)
 igraph.options(print.edge.attributes = TRUE)
 
-setwd("~/GitHub/Group-Informatics/R-Code/Student Data - LASI 2016/CourseData-Provenance/SNA_Ready_mdl_forum_posts_scrubbed_csv")
+# setwd("~/GitHub/Group-Informatics/R-Code/Student Data - LASI 2016/CourseData-Provenance/SNA_Ready_mdl_forum_posts_scrubbed_csv")
 
 ### This is data about discussions
 ### Developer discussions only

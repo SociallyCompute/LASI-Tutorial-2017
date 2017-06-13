@@ -1,8 +1,6 @@
 require('igraph')
 require('dplyr')
 
-# setwd("~/GitHub/Group-Informatics/R-Code/Student Data - LASI 2016/SocraticRank")
-
 
 mydata = read.csv("mdl_forum_posts_scrubbed_snadata_question_info.csv")
 mydata$isQuestion = mydata$message_q_mark == 1;
