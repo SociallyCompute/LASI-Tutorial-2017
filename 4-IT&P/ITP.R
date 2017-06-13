@@ -65,10 +65,10 @@ V(mod3)[ x == 6 ]$label.color <- "black"
 E(mod3)$width <- sqrt(E(mod3)$weight/50)
 E(mod3)$arrow.size <-0.4
 
-		filename=paste("output/","module3",".pdf")
-		pdf(filename)
+		# filename=paste("output/","module3",".pdf")
+		# pdf(file=filename)
 		plot.igraph(mod3, vertex.label.cex=.7, layout=layout.fruchterman.reingold(mod3, weights=V(mod3)$weight))
-		dev.off()
+		# dev.off()
 
 
 # Mod 4
@@ -104,10 +104,10 @@ V(mod4)[ x == 6 ]$label.color <- "black"
 E(mod4)$width <- sqrt(E(mod4)$weight/50)
 E(mod4)$arrow.size <-0.4
 
-		filename=paste("output/","module4",".pdf")
-		pdf(filename)
+		# filename=paste("output/","module4",".pdf")
+		 #pdf(filename)
 		plot.igraph(mod4, vertex.label.cex=.7, layout=layout.fruchterman.reingold(mod4, weights=V(mod4)$weight))
-		dev.off()
+		# dev.off()
 		
 # Mod 5
 V(mod5)$label <- V(mod5)$id
@@ -142,11 +142,11 @@ V(mod5)[ x == 6 ]$label.color <- "black"
 E(mod5)$width <- sqrt(E(mod5)$weight/50)
 E(mod5)$arrow.size <-0.4
 
-		filename=paste("output/","module5",".pdf")
-		pdf(filename)
+#		filename=paste("output/","module5",".pdf")
+#		pdf(filename)
 #		layout.mds(mod5)
 		plot.igraph(mod5, vertex.label.cex=.7, layout=layout.fruchterman.reingold(mod5, weights=V(mod5)$weight))
-		dev.off()
+#		dev.off()
 
 
 # Mod 6
@@ -183,16 +183,16 @@ V(mod6)[ x == 6 ]$label.color <- "black"
 E(mod6)$width <- sqrt(E(mod6)$weight/50)
 E(mod6)$arrow.size <-0.4
 
-		filename=paste("output/","module6",".pdf")
-		pdf(filename)
+#		filename=paste("output/","module6",".pdf")
+#		pdf(filename)
 		plot.igraph(mod6, vertex.label.cex=.7, layout=layout.fruchterman.reingold(mod6, weights=V(mod6)$weight))
-		dev.off()
+#		dev.off()
 
 
 # Fruchterman-Reingold ALL ==========================================
 
-		filename=paste("output/","springAll","b.pdf")
-		pdf(filename)
+#		filename=paste("output/","springAll","b.pdf")
+#		pdf(filename)
 		# repulse=TRUE, repeqdis=.07, 
 		
 		E(mod3)$width <- (E(mod3)$weight/23)
@@ -204,19 +204,19 @@ E(mod6)$arrow.size <-0.4
 		plot.igraph(mod4, main="mod4", vertex.label.cex=.7, layout=layout.Fruchterman-Reingold(mod4, repulse=TRUE, repeqdis=1, mass=.72))
 		plot.igraph(mod5, main="mod5", vertex.label.cex=.7, layout=layout.Fruchterman-Reingold(mod5, repulse=TRUE, repeqdis=1, mass=.72))
 		plot.igraph(mod6, main="mod6", vertex.label.cex=.7, layout=layout.Fruchterman-Reingold(mod6, repulse=TRUE, repeqdis=1, mass=.72))
-		dev.off()
+#		dev.off()
 
 
 # Kawai ALL ==========================================
 
-		filename=paste("output/","KawaiAll","b.pdf")
-		pdf(filename)
+#		filename=paste("output/","KawaiAll","b.pdf")
+#		pdf(filename)
 		# repulse=TRUE, repeqdis=.07, 
 		plot.igraph(mod3, main="mod3", vertex.label.cex=.7, layout=layout.kamada.kawai(mod3,  weights=sqrt(E(mod3)$weight+.01)))
 		plot.igraph(mod4, main="mod4", vertex.label.cex=.7, layout=layout.kamada.kawai(mod4,  weights=sqrt(E(mod4)$weight+.01)))
 		plot.igraph(mod5, main="mod5", vertex.label.cex=.7, layout=layout.kamada.kawai(mod5,  weights=sqrt(E(mod5)$weight+.01)))
 		plot.igraph(mod6, main="mod6", vertex.label.cex=.7, layout=layout.kamada.kawai(mod6,  weights=sqrt(E(mod6)$weight+.01)))
-		dev.off()
+#		dev.off()
 
 # spinglass communities
 ##=====================SPIN GLASS============================================
@@ -242,12 +242,12 @@ com6 <- spinglass.community(mod6, spins=6)
 grayer6 <- 1/(com6$membership+1) 
 V(mod6)$color <- gray(grayer6) 
 
-		filename=paste("output/","ALL","spin.pdf")
-		pdf(filename)
+#		filename=paste("output/","ALL","spin.pdf")
+#		pdf(filename)
 		plot.igraph(mod3, main="mod3", vertex.label.cex=.7, layout=layout.kamada.kawai(mod3, weights=E(mod3)$weight+.01))
 		plot.igraph(mod4, main="mod4", vertex.label.cex=.7, layout=layout.kamada.kawai(mod4, weights=E(mod4)$weight+.01))
 		plot.igraph(mod5, main="mod5", vertex.label.cex=.7, layout=layout.kamada.kawai(mod5, weights=E(mod5)$weight+.01))
 		plot.igraph(mod6, main="mod6", vertex.label.cex=.7, layout=layout.kamada.kawai(mod6, weights=E(mod6)$weight+.01))
 
-		dev.off()
+#		dev.off()
 
