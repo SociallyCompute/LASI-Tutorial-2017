@@ -1,11 +1,11 @@
 ---
 title: "Student Data README.md"
 author: "Sean P. Goggins"
-date: "June 28, 2016"
+date: "June 13, 2017"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, id:"j3vnhjqh"}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -14,22 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 2. Read : A bunch of read records, with the username, threadID, timestamp. No postID
 
 ## MDL Forum Posts
-1. Forum Data: PostID, ThreadID, ParentPostID, PostCreator and Timestamp for creation and modification are seperate fields. 
-2. There are now two files that work. One is reads. One is posts. 
-3. Unlike the sample data, the directed graph is not aggregated and weighted in advance. Both 
-
-
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+1. Forum Data: PostID, ThreadID, ParentPostID, PostCreator and Timestamp for creation and modification are seperate fields.
+2. There are now two files that work. One is reads. One is posts.
+3. Unlike the sample data, the directed graph is not aggregated and weighted in advance.  
