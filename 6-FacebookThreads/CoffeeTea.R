@@ -78,7 +78,7 @@ topicCloseFrame <- data.frame(x=templateTopic)
 for(i in 1:length(allDays))
 {
 	day.i <- allDays[i]
-	network.i <- networkList[networkList$day_of_year == day.i,]
+	network.i <- networkList[network_List$day_of_year == day.i,]
 
 	tnetNew <- data.frame(x=network.i$node1, y=network.i$node2, weight=network.i$weight)
 	tnetNew.i <- as.tnet(tnetNew, type="weighted one-mode tnet")

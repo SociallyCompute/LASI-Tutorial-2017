@@ -8,7 +8,7 @@ igraph.options(print.vertex.attributes = TRUE)
 igraph.options(print.edge.attributes = TRUE)
 
 # Setting the working directory
-setwd("~/GitHub/Group-Informatics/R-Code/IT&P")
+# setwd("~/GitHub/Group-Informatics/R-Code/IT&P")
 
 
 mod3<- read.graph("mod3d.net", format="pajek")
@@ -63,7 +63,7 @@ V(mod3)[ x == 6 ]$label.color <- "black"
 # spinglass.community(mod3, spins=8)
 # V(mod3)$size <- (1+(alpha.centrality(mod3, alpha=.005)))^2
 E(mod3)$width <- sqrt(E(mod3)$weight/50)
-E(mod3)$arrow.size <-0.4
+E(mod3)$arrow.size <-0.04
 
 		# filename=paste("output/","module3",".pdf")
 		# pdf(file=filename)

@@ -3,7 +3,6 @@ rm(list=ls(all=TRUE))
 
 install.packages("stringr")
 install.packages("twitteR")
-install.packages("stringr")
 install.packages("zoo")
 
 ##Basic Network Libraries for Github
